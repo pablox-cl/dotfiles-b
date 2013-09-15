@@ -1,3 +1,6 @@
 [submodule "dircolors"]
 	path = dircolors
 	url = git://github.com/seebi/dircolors-solarized
+[submodule "config/systemd/user"]
+	path = config/systemd/user
+	url = git://github.com/PaBLoX-CL/systemd-user-units.git
