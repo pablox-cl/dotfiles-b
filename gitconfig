@@ -1,0 +1,34 @@
+[user]
+	name = Pablo Olmos de Aguilera Corradini
+	email = pablo@glatelier.org
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	autocrlf = input
+[merge]
+	tool = meld
+	defaultToUpstream = true
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	cl = clone
+	br = branch
+	add = add -v
+	incoming = "!git remote update -p; git log ..@{u}"
+	outgoing = log @{u}..
+	whatsnew = log ...@{u}
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = simple
+[path]
+	include = ~/.gitconfig.local
+[diff]
+	# Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
+	# instead of a/b/c/d as prefixes for patches
+	mnemonicprefix = true
+
+# vim: set filetype=gitconfig noexpandtab shiftwidth=4 tabstop=4:

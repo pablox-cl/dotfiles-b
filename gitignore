@@ -1,0 +1,19 @@
+# backup files
+*.bak
+
+# vim files
+*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# compiled files
+*.py[cod]
+*.rbc
+
+# compiled object files
+*.o
+
+# compiled dynamic libraries
+*.so
