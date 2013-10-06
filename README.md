@@ -1,4 +1,111 @@
-dotfiles
+Dotfiles
 ========
 
-Never leave home without them
+> Never leave home without them
+
+A *n*-times try to keep my dotfiles managed. This time with the awesome [rcm][]
+to manage the files and [prezto][] as the main (zsh) framework. Please take in
+mind this config assumes prezto installed, so a lot of stuff it's likely not to
+work as intended if you don't have to.
+
+Also, I'm still fighting with systemd, so some **really** important files like
+zshrc, zshenv and zprofile are missing.
+
+### Prerequisites
+
++ Zsh 4.3.10 (though I'm using 5.0.2, so I *guess* it's okay)
++ Prezto
++ Correctly configured `systemd --user` (optional)
+
+Install
+-------
+
+1. Install [rcm][]
+2. Clone the dotfiles:
+
+    git clone https://github.com/PaBLoX-CL/dotfiles.git ~/.dotfiles
+
+3. Run
+
+    rcup rcrc
+    rcup
+
+4. Update submodules
+
+    git submodule update --init --recursive
+
+5. Profit!
+
+What's included?
+----------------
+
+My config it's a bit opinionated, so there are a couple of things you have to
+have in mind:
+
++ When it's possible, configs will try to match vim style
++ I use GNU/Linux (Arch Linux to be more precise), so I'm likely going to strip
+  references to OSX.
++ While some submodules could look that they are lagging behind the original
+  repo, I'm only going to update them while there's something really interesting
+  to add, in the meanwhile of course, I keep them updated on my local machine.
+  That's because I don't like those superfluous "merge commits" (if you know how
+  to avoid that, please tell me).
+
+### External stuff (*aka* submodules)
+
+Right now this project makes use of some submodules:
+
++ My [own fork](https://github.com/PaBLoX-CL/prezto) of Prezto (which right now is
+  almost exactly as Prezto)
++ My [systemd-user-units](https//github.com/PaBLoX-CL/systemd-user-units). This
+  likely can be ignored because it only makes sense if you are crazy enough to
+  try to jump to use something **so** experimental
++ My vim configuration (not yet available)
++ [Seebi's dircolors](https://github.com/seebi/dircolors-solarized)
+
+Rationale
+---------
+
+I decided to build my own "dotfiles" because that's the only way to really
+understand what's going on below, I chose prezto because it doesn't interfere
+too much with the normal functioning of the zsh shell and has sane defaults.
+
+I tried to make this little project with all the  documentation as possible,
+because I found that's one of the easiest (and most fun) ways to learn. So you
+are likely going to found a lot of comments and text.
+
+[Dotfiles are meant to be forked](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/)
+it's a great article to understand why I made some decisions about the structure
+and organization.
+
+I also tried to make this as delete friendly as possible, so you can strip and
+take what you found interesting.
+
+Bugs
+----
+
+I have tried to make this to work everywhere, so if there's any issue please
+don't hesitate to [tell me](https://github.com/PaBLoX-CL/dotfiles/issues/new).
+
+Acknowledgments
+---------------
+
+My dotfiles have been made possible after a lot of years of customizing and
+tweaking. I tried hard to document everything, but I'm sure there's a lot I
+missed. Anyway, here are those who were my main inspiration:
+
+Repository                                      | What did I took:
+------------------------------------------------|--------------------------------
+https://github.com/ryanb/dotfiles               | General stuff, some alias
+https://github.com/skwp/yadr                    | Mainly vim idea
+https://github.com/holman/dotfiles              | Tidiness and zsh-fu
+https://github.com/rtomayko/dotfiles            | Who haven't looked here?
+https://github.com/spicycode/ze-best-zsh-config | Structure and granularity
+https://github.com/robbyrussell/oh-my-zsh       | A bit of everything
+https://github.com/ryanb/dotfiles               | A lot of stuff (`c`, `h`)
+
+Copyright
+---------
+
+[rcm]: http://github.com/mike-burns/rcm
+[prezto]: http://github.com/sorin-ionescu/prezto
