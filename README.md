@@ -23,16 +23,16 @@ Install
 1. Install [rcm][]
 2. Clone the dotfiles:
 
-    git clone https://github.com/PaBLoX-CL/dotfiles.git ~/.dotfiles
+        git clone https://github.com/PaBLoX-CL/dotfiles.git ~/.dotfiles
 
 3. Run
 
-    rcup rcrc
-    rcup
+        rcup rcrc
+        rcup
 
 4. Update submodules
 
-    git submodule update --init --recursive
+        git submodule update --init --recursive
 
 5. Profit!
 
