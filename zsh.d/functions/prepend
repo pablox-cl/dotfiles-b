@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# Prepends filename with the chosen text.
+#
+# Authors:
+#   Pablo Olmos de Aguilera Corradini <pablo at glatelier dot org>
+#
+# TODO: add error checking
+# TODO: add a (decent) usage section
+
+# $1: prepended string
+# $2: original file
+
+usage() {
+  cat <<EOF
+  Usage: prepend 000. a_file -> 000.a_file
+EOF
+}
+
+[ ! $(command -v prepend) ] && return 127
+
+mv -v ${1} ${1}${2} || usage
+

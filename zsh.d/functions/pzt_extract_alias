@@ -1,0 +1,17 @@
+#
+# Extracts the aliases from a file and return it as an array
+#
+# Authors:
+#   Pablo Olmos de Aguilera Corradini <pablo at glatelier dot org>
+#
+# TODO: make the awk function a bit more elegant
+
+local file=${1}
+local -a pzt_aliases
+
+pzt_aliases=$(awk '{ FS="=" } /^alias/ { gsub("alias ", ""); print $1 }' ${file})
+
+# make sure the aliases go "out" the local scope of the function
+print -l ${pzt_aliases}
+
+# vim: ft=zsh

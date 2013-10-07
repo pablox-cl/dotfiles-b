@@ -1,0 +1,21 @@
+#!/bin/zsh
+#
+# Check TODOs in a specfic project
+#
+# Authors:
+#   Pablo Olmos de Aguilera <pablo at glatelier dot org>
+#
+# TODO: add argument handling
+# TODO: add better error handling
+# TODO: improve output
+# TODO: ignore the `todo` on the same function
+
+local PZT_GREP=$(whence -p grep)
+local full_path=$ZSH/functions/$0
+$PZT_GREP -RHnw --color=auto --exclude=$0 'TODO' $ZSH
+echo "\nTodo's on this same function: $full_path"
+sed -n "5,/local/p" $full_path | $PZT_GREP -n --color=auto 'TODO' # \
+# | sed -n "s/(standard input)/$0/p" | $PZT_GREP --color=auto 'TODO'
+# ${PZT_MYNAME}
+
+# wip: sed or awk?

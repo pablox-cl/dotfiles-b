@@ -1,1 +1,1 @@
-EXCLUDES="README.md LICENSE dircolors *:systemd zprezto*"
+EXCLUDES="README.md LICENSE dircolors *:systemd zprezto* zsh.d"
