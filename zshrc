@@ -73,7 +73,7 @@ config_dirs=( $ZSH/${^config_dirs} )        # prepend the full directory
 # load config files
 function source_files_from {
   local dir=$1
-  for file in $dir/!(999*).*sh(N); do
+  for file in $dir/[!999]*.*sh(N); do
     source $file
   done
 }
