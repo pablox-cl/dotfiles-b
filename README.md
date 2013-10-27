@@ -15,7 +15,7 @@ zshrc, zshenv and zprofile are missing.
 
 + Zsh 4.3.10 (though I'm using 5.0.2, so I *guess* it's okay)
 + Prezto
-+ Correctly configured `systemd --user` (optional)
++ ~~Correctly configured `systemd --user` (optional)~~
 
 Install
 -------
@@ -57,9 +57,9 @@ Right now this project makes use of some submodules:
 
 + My [own fork](https://github.com/PaBLoX-CL/prezto) of Prezto (which right now is
   almost exactly as Prezto)
-+ My [systemd-user-units](https//github.com/PaBLoX-CL/systemd-user-units). This
++ ~~My [systemd-user-units](https//github.com/PaBLoX-CL/systemd-user-units). This
   likely can be ignored because it only makes sense if you are crazy enough to
-  try to jump to use something **so** experimental
+  try to jump to use something **so** experimental~~
 + My vim configuration (not yet available)
 + [Seebi's dircolors](https://github.com/seebi/dircolors-solarized)
 
