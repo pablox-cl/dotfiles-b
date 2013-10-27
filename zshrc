@@ -29,12 +29,9 @@ functions_path=($ZSH/${^functions_path})        # prepend local dir
 # Add directories for (local) completion scripts and functions so they can be
 # autoloaded later.
 # NOTE: this has to be loaded *before* compinit
-# FIXME: rvm completion is added while prezto updates to a newer commit
-# + https://github.com/zsh-users/zsh-completions/pull/168 (now merged into
-#   upstream zsh-completionS)
+
 fpath=(
   $functions_path
-  ~/.rvm/scripts/extras/completion.zsh
   $fpath
 )
 
