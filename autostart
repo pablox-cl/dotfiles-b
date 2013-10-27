@@ -1,0 +1,14 @@
+# dropbox
+
+~/.dropbox-dist/dropboxd &
+
+gnome-do &
+
+numlockx on &
+
+parcellite &
+
+feh --bg-max "$(find $HOME/customize/wallpaper -iname *.jpg | shuf | head -n 1)" &
+
+xcape &
+

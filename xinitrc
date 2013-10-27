@@ -1,0 +1,1 @@
+/home/pablo/.a-dotfiles/xinitrc
