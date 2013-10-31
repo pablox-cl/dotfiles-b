@@ -20,5 +20,6 @@
 [[ $TTY == /dev/tty1 ]] \
   && (( $UID )) \
   && [[ -z $DISPLAY ]]  \
-  # && systemctl --user start wm.target
   && startx
+  # && systemctl --user start wm.target
+

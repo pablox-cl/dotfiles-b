@@ -12,3 +12,4 @@ feh --bg-max "$(find $HOME/customize/wallpaper -iname *.jpg | shuf | head -n 1)"
 
 xcape &
 
+tomboy --tray &
