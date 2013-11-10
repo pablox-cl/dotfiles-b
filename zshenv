@@ -41,15 +41,6 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-# Set the list of directories that Zsh searches for programs.
-# I manage some binaries and scripts on my ~/bin directory, so I add it first
-path=(
-  ${HOME}/bin
-  ${HOME}/.npm-packages/bin
-  ${HOME}/.cabal/bin
-  $path
-)
-
 #
 # Less
 #

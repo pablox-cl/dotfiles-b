@@ -18,6 +18,19 @@ ZSH=${ZDOTDIR:-$HOME}/.zsh.d
 PZT_PROJECT_DIR=${HOME}/dev
 
 #
+# Path
+#
+
+# Set the list of directories that Zsh searches for programs.
+# I manage some binaries and scripts on my ~/bin directory, so I add it first
+path=(
+  ${HOME}/bin
+  ${HOME}/.npm-packages/bin
+  ${HOME}/.cabal/bin
+  $path
+)
+
+#
 # Functions
 #
 
