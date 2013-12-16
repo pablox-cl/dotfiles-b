@@ -132,7 +132,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #   'builtin' 'bg=blue' \
 #   'command' 'bg=blue' \
 #   'function' 'bg=blue'
-#
 
 #
 # Terminal
@@ -140,6 +139,12 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 
 # Auto set the tab and window titles.
 zstyle ':prezto:module:terminal' auto-title 'yes'
+
+# Set the window title format.
+# zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+
+# Set the tab title format.
+# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 #
 # Tmux
