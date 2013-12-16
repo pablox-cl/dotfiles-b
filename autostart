@@ -8,7 +8,7 @@ numlockx on &
 
 parcellite &
 
-feh --bg-max "$(find $HOME/customize/wallpaper -iname *.jpg | shuf | head -n 1)" &
+feh --bg-max "$(find $HOME/customize/wallpaper -iregex '.*\.\(jpg\|png\)' | shuf | head -n 1)" &
 
 xcape &
 
