@@ -1,1 +1,3 @@
-EXCLUDES="README.md dircolors *:systemd zprezto zsh.d"
+EXCLUDES="README.md *:systemd dircolors zprezto"
+# experimental, waiting for merge https://github.com/thoughtbot/rcm/pull/12
+#NEVER_DESCEND="dircolors zprezto"
