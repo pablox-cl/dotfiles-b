@@ -25,10 +25,13 @@ Install
 
         git clone https://github.com/PaBLoX-CL/dotfiles.git ~/.dotfiles
 
-3. Run
+3. View what would be installed
 
-        rcup rcrc
-        rcup
+        RCRC="config/rcrc" lsrc
+
+3. Install
+
+        RCRC="config/rcrc" rcup
 
 4. Update submodules
 
