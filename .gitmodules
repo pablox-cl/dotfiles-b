@@ -5,5 +5,5 @@
 	path = config/systemd/user
 	url = git://github.com/PaBLoX-CL/systemd-user-units.git
 [submodule "zprezto"]
-	path = zprezto
+	path = config/zsh/.zprezto
 	url = git://github.com/PaBLoX-CL/prezto.git

@@ -11,8 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Local directory
-ZSH=${ZDOTDIR:-$HOME}/.zsh.d
+# Local stuff
+ZSH=$ZDOTDIR/zsh.d
 
 # Working dir for developing
 PZT_PROJECT_DIR=${HOME}/dev
