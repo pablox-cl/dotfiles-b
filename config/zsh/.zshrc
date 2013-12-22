@@ -11,9 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Local stuff
-ZSH=$ZDOTDIR/zsh.d
-
 # Working dir for developing
 PZT_PROJECT_DIR=${HOME}/dev
 
@@ -24,7 +21,7 @@ PZT_PROJECT_DIR=${HOME}/dev
 # Add a function path
 # NOTE: fpath doesn't recurse directories so they have to be add explicitily
 functions_path=( functions completions )
-functions_path=($ZSH/${^functions_path})        # prepend local dir
+functions_path=($ZDOTDIR/${^functions_path})        # prepend local dir
 
 # Add directories for (local) completion scripts and functions so they can be
 # autoloaded later.
@@ -36,7 +33,7 @@ fpath=(
 )
 
 # Autoload functions
-autoload -Uz $ZSH/functions/^*.*sh(:t)
+autoload -Uz $ZDOTDIR/functions/^*.*sh(:t)
 
 #
 # Main configuration
@@ -54,12 +51,12 @@ typeset -U config_files config_dirs
 # Specifically add the directories involved, and then add a "last" directory,
 # much like the `.vim/after` dir.
 # NOTE: order matters
-# config_files=($ZSH/{settings,aliases,zle,after}/!(999*).*sh(N))
+# config_files=($ZDOTDIR/{settings,aliases,zle,after}/!(999*).*sh(N))
 
 # Last alternative is to use an array to hold the dirs, the issue here is that you
 # are obligued to use a nested `for` loop, to traverse theme
 config_dirs=( settings aliases zle after )
-config_dirs=( $ZSH/${^config_dirs} )        # prepend the full directory
+config_dirs=( $ZDOTDIR/${^config_dirs} )        # prepend the full directory
 
 # for dir in $config_dirs; do
 #   for file in $dir/!(999*).*sh(N); do
