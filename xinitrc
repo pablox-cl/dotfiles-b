@@ -12,8 +12,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 function autostart {
-  if [ -s $XDG_CONFIG_HOME/autostart.sh ]; then
-    . $XDG_CONFIG_CHOME/autostart.sh
+  if [ -s $HOME/.config/autostart.sh ]; then
+    . $HOME/.config/autostart.sh
   fi
 }
 
