@@ -2,6 +2,9 @@
 alias e=${(z)EDITOR}
 alias _e='sudoedit '
 
+# browser
+alias br='${(z)BROWSER}'
+
 # ls
 alias ls='ls --group-directories-first --color=auto --classify' # classify symbols
 
