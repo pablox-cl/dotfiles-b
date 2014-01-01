@@ -1,0 +1,49 @@
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+
+" Hide everything but the bookmarks toolbar and tabs
+set guioptions=bBCrs
+
+" Bypass pentadactyl on google websites
+" autocmd LocationChange google.com :normal! <C-z>
+set passkeys+=mail.google.com:'!#*+-./<C-Down><C-s><Enter>?INU[]acefjk lmnopqrsuvxyz',*a,*n,*r,*s,*t,*u,ga,gc,gd,gi,gl,gs,gt,yo
+set strictfocus+=mail.google.com:laissez-faire
+
+" Bypass pentadactyl on DuckDuckGo
+"set passkeys+=duckduckgo.com:"!/<Enter><C-Enter>ldvjkhrsm1"
+"set strictfocus+=duckduckgo.com:laissez-faire
+
+" Fix "yank" issue
+" http://code.google.com/p/dactyl/issues/detail?id=719#c10
+js editor.defaultRegister="+"
+
+" Change map leader
+map , <Leader>
+
+" Set duckduckgo as the default search engine
+set defsearch=duckduckgo
+
+" Commands
+command! addToDelicious -js
+  \ gBrowser.addTab('http://delicious.com/save?title='
+  \ +encodeURIComponent(content.document.title)+'&url='
+  \ +encodeURIComponent(content.location.href)+'&notes='
+  \ +encodeURIComponent(content.getSelection())+'&sref=shareaholic');
+
+"command! addToKippt -js
+  "\ gBrowser.addTab(plugins.addto.kippt());
+
+" Mappings
+map <Leader>ad -ex addToDelicious
+"map <Leader>ak -ex addToKippt
+
+" Styling
+" http://www.fantascienza.net/leonardo/ar/inconsolatag/inconsolata-g_font.zip
+highlight FontFixed -append font: 12px "Inconsolata-g"
+
+" Run a wrapper for gvim so I can set the `PYTHONPATH` variable correctly there
+set editor='~/bin/gvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
+
+" vim: set ft=vim:
