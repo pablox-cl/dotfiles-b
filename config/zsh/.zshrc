@@ -11,6 +11,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# We need this specially if prezto it's not installed
+setopt EXTENDED_GLOB
+
 # Working dir for developing
 PZT_PROJECT_DIR=${HOME}/dev
 
