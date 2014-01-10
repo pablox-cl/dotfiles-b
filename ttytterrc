@@ -1,2 +1,7 @@
 ansi=1
+#notifytype=libnotify
+#notifies=dm,me,reply,search,default
+avatar=curl -s %U | convert - -colorspace Gray -colors 16 -antialias ppm:- | ppmascii -x2 -photo -winx=4
 readline=1
+vcheck=1
+ssl=1
