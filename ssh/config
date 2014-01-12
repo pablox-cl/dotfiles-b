@@ -1,0 +1,20 @@
+# vim: ft=sshconfig:
+
+Host bitbucket.org
+  HostName bitbucket.org
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_rsa.bitbucket
+
+Host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa.github
+
+Host linode
+  IdentityFile ~/.ssh/id_ecdsa.linode
+
+Host dh
+  HostName agba.dreamhost.com
+
+Host dhps
+  HostName ps160328.dreamhostps.com
+
