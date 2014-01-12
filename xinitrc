@@ -4,6 +4,8 @@
 #
 # Executed by startx (run your window manager from here)
 
+# TODO: is there any specification about autostart directories/files?
+#       is $XDG_CONFIG_HOME/autostart useful besides those .desktop?
 function autostart {
   if [ -s $HOME/.config/autostart.sh ]; then
     . $HOME/.config/autostart.sh
