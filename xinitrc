@@ -35,7 +35,7 @@ case $1 in
   e17) exec enlightenment_start;;
   ede) exec startede;;
   i3) exec i3 -V >> ~/.i3/i3log 2>&1;;
-  xmonad);;
+  xmonad) autostart; exec xmonad;;
   *) autostart; exec xmonad;;
 esac
 
