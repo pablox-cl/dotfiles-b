@@ -1,0 +1,86 @@
+! xresources file
+!
+! Remember to load this file or the changes are not applied
+!     xrdb ~/.config/.Xresources
+!
+!
+! ========
+!
+! Colorscheme stolen from pbrisbin:
+! + https://github.com/pbrisbin/dotfiles/blob/master/config/Xresources
+!
+! The font fallback idea is taken from thisoldman:
+! + https://bbs.archlinux.org/viewtopic.php?pid=1349107#p1349107
+!
+! Meslo font (André Berg)
+! + https://github.com/Lokaltog/powerline-fonts/tree/master/Meslo
+! + https://github.com/andreberg/Meslo-Font
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+*font: xft:Meslo LG S DZ:style=Regular:size=9, \
+       xft:Meslo LG S DZ for Powerline:style=RegularForPowerline:size=9, \
+       xft:WenQuanYi Bitmap Song:size=9, \
+       xft:unifont:style=Medium:antialias=false
+
+*boldFont: xft:Meslo LG S DZ:style=Bold:size=9, \
+           xft:WenQuanYi Bitmap Song:size=9, \
+           xft:unifont:style=Medium:antialias=false
+
+! not sure if this works
+URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
+URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+
+
+*foreground:  #dcdcdc
+*background:  #000000
+
+URxvt*cursorBlink:  true
+URxvt*cursorColor:  #c1c9c9
+
+URxvt*lineSpace:    2
+URxvt*fading:       10%
+URxvt*fadeColor:    grey
+URxvt*scrollBar:    false
+
+URxvt*urgentOnBell: true
+URxvt*visualBell:   false
+
+URxvt*perl-ext-common: default,matcher
+URxvt*url-launcher:    /usr/bin/firefox
+URxvt*matcher.button:  1
+
+URxvt*intensityStyles: false
+
+!black
+*color0: #222222
+*color8: #454545
+!red
+*color1: #9E5641
+*color9: #CC896D
+!green
+*color2: #6C7E55
+*color10: #7DB37D
+!yellow
+*color3: #CAAF2B
+*color11: #BFB556
+!blue
+*color4: #4c8ea1
+*color12: #6bc1d0
+!magenta
+*color5: #956D9D
+*color13: #C18FCB
+!cyan
+*color6: #7C9AA6
+*color14: #8FADBF
+!white
+*color7: #909090
+*color15: #FFFFFF
+
+! vim: ft=xdefaults
+
