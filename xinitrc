@@ -7,17 +7,17 @@
 # TODO: is there any specification about autostart directories/files?
 #       is $XDG_CONFIG_HOME/autostart useful besides those .desktop?
 function autostart {
-  if [ -s $HOME/.config/autostart.sh ]; then
-    . $HOME/.config/autostart.sh
+  if [ -s "$XDG_CONFIG_HOME/autostart.sh" ]; then
+    . "$XDG_CONFIG_HOME/autostart.sh"
   fi
 }
 
-if [ -f "$HOME/.Xresources" ]; then
-  xrdb -merge "$HOME/.Xresources"
+if [ -f "$XDG_CONFIG_HOME/Xresources" ]; then
+  xrdb -merge "$XDG_CONFIG_HOME/Xresources"
 fi
 
-if [ -f "$HOME/.Xmodmap" ]; then
-  xmodmap "$HOME/.Xmodmap"
+if [ -f "$XDG_CONFIG_HOME/Xmodmap" ]; then
+  xmodmap "$XDG_CONFIG_HOME/Xmodmap"
 fi
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
