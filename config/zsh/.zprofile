@@ -109,5 +109,5 @@ fi
 [[ $TTY == /dev/tty1 ]] \
   && (( $UID )) \
   && [[ -z $DISPLAY ]]  \
-  && startx
+  && startx 2>! "$XDG_RUNTIME_DIR"/xsession-errors
   # && systemctl --user start wm.target
