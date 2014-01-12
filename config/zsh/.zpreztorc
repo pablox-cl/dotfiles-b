@@ -41,6 +41,8 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'pacman' \
   'fasd' \
+  'ssh' \
+  'gpg' \
   'ruby'
 
 #
