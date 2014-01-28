@@ -7,3 +7,6 @@
 [submodule "zprezto"]
 	path = config/zsh/.zprezto
 	url = git://github.com/PaBLoX-CL/prezto.git
+[submodule "base16-xresources"]
+	path = config/xcolors/base16
+	url = https://github.com/chriskempson/base16-xresources
