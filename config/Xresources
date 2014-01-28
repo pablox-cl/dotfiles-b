@@ -1,8 +1,7 @@
 ! xresources file
 !
 ! Remember to load this file or the changes are not applied
-!     xrdb ~/.config/.Xresources
-!
+!     xrdb ~/.config/Xresources
 !
 ! ========
 !
@@ -36,6 +35,7 @@ Xft.rgba: rgb
 URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
 URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
 
+URxvt*termName: rxvt-unicode
 
 *foreground:  #dcdcdc
 *background:  #000000
@@ -51,36 +51,47 @@ URxvt*scrollBar:    false
 URxvt*urgentOnBell: true
 URxvt*visualBell:   false
 
-URxvt*perl-ext-common: default,matcher
-URxvt*url-launcher:    /usr/bin/firefox
-URxvt*matcher.button:  1
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.perl-ext: default,url-select,clipboard
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
 
 URxvt*intensityStyles: false
 
 !black
-*color0: #222222
-*color8: #454545
+*.color0: #222222
+*.color8: #454545
 !red
-*color1: #9E5641
-*color9: #CC896D
+*.color1: #9E5641
+*.color9: #CC896D
 !green
-*color2: #6C7E55
-*color10: #7DB37D
+*.color2: #6C7E55
+*.color10: #7DB37D
 !yellow
-*color3: #CAAF2B
-*color11: #BFB556
+*.color3: #CAAF2B
+*.color11: #BFB556
 !blue
-*color4: #4c8ea1
-*color12: #6bc1d0
+*.color4: #4c8ea1
+*.color12: #6bc1d0
 !magenta
-*color5: #956D9D
-*color13: #C18FCB
+*.color5: #956D9D
+*.color13: #C18FCB
 !cyan
-*color6: #7C9AA6
-*color14: #8FADBF
+*.color6: #7C9AA6
+*.color14: #8FADBF
 !white
-*color7: #909090
-*color15: #FFFFFF
+*.color7: #909090
+*.color15: #FFFFFF
+
+! Fix <Ctrl> <Arrow> issue
+
+URxvt*keysym.Control-Up:     \033[1;5A
+URxvt*keysym.Control-Down:   \033[1;5B
+URxvt*keysym.Control-Left:   \033[1;5D
+URxvt*keysym.Control-Right:  \033[1;5C
 
 ! vim: ft=xdefaults
 
