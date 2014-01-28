@@ -1,3 +1,2 @@
+source: https://rubygems.org
 gem: --no-document
-BUNDLE_PATH: vendor/bundle
-BUNDLE_BIN: vendor/bundle/bin

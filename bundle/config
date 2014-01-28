@@ -1,0 +1,8 @@
+---
+BUNDLE_PATH: vendor/bundle
+# Sam Stephenson suggests doing it by hand, rather than make it default
+# for everything.
+# https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs
+#BUNDLE_BIN: vendor/bundle/bin
+
+# vim: filetype=yaml
