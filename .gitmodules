@@ -1,5 +1,5 @@
-[submodule "dircolors"]
-	path = dircolors
+[submodule "dircolors-solarized"]
+	path = config/shell-colors/dircolors-solarized
 	url = git://github.com/seebi/dircolors-solarized
 [submodule "config/systemd/user"]
 	path = config/systemd/user
