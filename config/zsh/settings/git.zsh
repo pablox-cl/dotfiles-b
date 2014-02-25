@@ -19,7 +19,7 @@ function g() {
     git $@
   else
     # git status
-    git status --ignore-submodules=${_git_status_ignore_submodules}
+    git status --short --ignore-submodules=${_git_status_ignore_submodules}
   fi
 }
 
