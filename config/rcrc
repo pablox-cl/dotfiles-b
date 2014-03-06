@@ -1,3 +1,2 @@
-EXCLUDES="README.md *:systemd dircolors-solarized base16"
-# experimental, waiting for merge https://github.com/thoughtbot/rcm/pull/12
-#NEVER_DESCEND="dircolors zprezto"
+EXCLUDES="README.md *:systemd"
+SYMLINK_DIRS="base16 dircolors-solarized"
