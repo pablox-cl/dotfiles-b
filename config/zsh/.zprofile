@@ -59,7 +59,7 @@ typeset -gU cdpath fpath mailpath path
 # I manage some binaries and scripts on my ~/bin directory, so I add it first
 path=(
   ${HOME}/bin
-  ${HOME}/.npm-packages/bin
+  ${HOME}/.npm/npm-packages/bin
   ${HOME}/.cabal/bin
   # /usr/local/{bin,sbin} # is this necessary on Arch Linux?
   $path
