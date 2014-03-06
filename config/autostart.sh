@@ -1,15 +1,18 @@
-# dropbox
+# TODO: check if stuff exists first
 
-~/.dropbox-dist/dropboxd &
+# ~/.dropbox-dist/dropboxd &
+( /opt/dropbox/dropbox ) &
 
-gnome-do &
+( urxvtd -f -q -o ) &
 
-numlockx on &
+( gnome-do ) &
 
-parcellite &
+( numlockx on ) &
 
-feh --bg-max "$(find $HOME/customize/wallpaper -iregex '.*\.\(jpg\|png\)' | shuf | head -n 1)" &
+( parcellite ) &
 
-xcape &
+( feh --bg-max "$(find $HOME/customize/wallpaper -iregex '.*\.\(jpg\|png\)' | shuf | head -n 1)" ) &
 
-tomboy --tray &
+( xcape ) &
+
+( tomboy --tray ) &
