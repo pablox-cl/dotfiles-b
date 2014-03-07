@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+git submodule update --init --recursive
+
+# dot-prefixed files are skipped unless explicitly named
+rcup -K config/zsh/{.zprofile,.zshenv,.zshrc}
