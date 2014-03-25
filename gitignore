@@ -12,6 +12,9 @@ Session.vim
 *.py[cod]
 *.rbc
 
+# compiled interface file
+*.hi
+
 # compiled object files
 *.o
 
