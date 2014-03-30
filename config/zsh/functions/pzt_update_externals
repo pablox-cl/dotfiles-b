@@ -1,0 +1,87 @@
+#
+# Rudimentary script to track changes from externals files that doesn't
+# belong to a module and update them if there are changes.
+#
+# Author:
+#   Pablo Olmos de Aguilera Corraini <pablo at glatelier dot org>
+#
+# Usage:
+#
+## Update every file if possible
+#  pzt_update_externals
+#
+## Shows which files are being tracked
+#  pzt_update_externals show
+#
+#   TODO: Improve output
+#   TODO: Improve variable naming
+#   TODO: Split up the humongous for loop
+
+cache_dir=${ZDOTDIR:-$HOME}/.zcompcache
+
+# The external files are tracked in a different file
+source ~/.dotfiles/config/zsh/settings/externals
+
+if [[ $1 == "show" ]]; then
+  for key value in ${(kv)externals}; do
+    print "$key $value"
+  done
+  exit 0
+else
+  print "Wrong argument, perhaps you meant 'show' or the command alone?"
+  exit 1
+fi
+
+function download() {
+  local url=$1
+  curl --silent --fail --location --progress-bar --remote-name --remote-time $url
+}
+
+function check_pure() {
+  local file=$1
+  local url=$2
+
+  if [[ $url =~ 'pure.zsh' ]]; then
+    mv ${url:t} $1
+  fi
+}
+
+function get_md5() {
+  md5sum $1 | cut -d' ' -f1
+}
+
+cd $cache_dir
+[[ -d track_externals ]] || mkdir track_externals
+cd track_externals
+
+for final_loc url in ${(kv)externals}; do
+
+  original_file=~/.dotfiles/$final_loc
+  downloaded_file=${final_loc:t}
+
+  echo "Trying to download latest version of $downloaded_file, from:"
+  echo $url
+  download $url
+  if [[ $? != 0 ]]; then
+    echo "Error downloading $downloaded_file... skipping"
+    continue
+  fi
+
+  # pass both values of the hash
+  check_pure $downloaded_file $url
+
+  original_file_md5=$( get_md5 $original_file )
+  downloaded_file_md5=$( get_md5 $downloaded_file )
+
+  if [[ $original_file_md5 == $downloaded_file_md5 ]]; then
+    echo "No changes for $downloaded_file"
+  else
+    echo "There's a new version of $downloaded_file"
+    echo "Moving to $original_file"
+    mv $downloaded_file $original_file
+  fi
+  echo ""
+
+done
+
+# vim: ft=zsh

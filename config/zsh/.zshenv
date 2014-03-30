@@ -22,7 +22,7 @@ setopt EXTENDED_GLOB
 
 # Add a function path
 # NOTE: fpath doesn't recurse directories so they have to be add explicitily
-functions_path=( functions completions )
+functions_path=( themes functions completions )
 functions_path=($ZDOTDIR/${^functions_path})        # prepend local dir
 
 # Add directories for (local) completion scripts and functions so they can be

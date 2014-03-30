@@ -1,0 +1,17 @@
+#
+# Simple file to track external files. It is used as a
+#
+# `key`                                           `value`
+# `location relative to the dotfiles directory`   `url`
+
+# `externals` is an associative array (hash or dictionary), it **has** to be
+# declared **before** it's actually used.
+typeset -A externals
+
+externals=(
+  'config/zsh/functions/git-escape-magic' https://github.com/knu/zsh-git-escape-magic/raw/master/git-escape-magic
+  'config/zsh/themes/prompt_pbr_setup' https://github.com/pbrisbin/dotfiles/raw/master/tag-zsh/config/zsh/functions/prompt_pbr_setup
+  'config/zsh/themes/prompt_pure_setup' https://github.com/sindresorhus/pure/raw/master/pure.zsh
+)
+
+# vim: filetype=zsh
