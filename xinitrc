@@ -14,6 +14,9 @@ function autostart {
 
 if [ -f "$XDG_CONFIG_HOME/Xresources" ]; then
   xrdb -merge "$XDG_CONFIG_HOME/Xresources"
+  if [ -d "$XDG_CONFIG_HOME/xcolors" ]; then
+    xrdb -merge "$XDG_CONFIG_HOME/xcolors/base16/base16-default.dark.xresources"
+  fi
 fi
 
 if [ -f "$XDG_CONFIG_HOME/Xmodmap" ]; then
