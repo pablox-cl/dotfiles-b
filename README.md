@@ -3,13 +3,14 @@ Dotfiles
 
 > Never leave home without them
 
+**ALERT: I had to push force this, so sorry if somebody uses this. I mostly
+ordered stuff here, so I didn't change anything. I suggest to remove everything
+and clone this repo again.**
+
 A *n*-times try to keep my dotfiles managed. This time with the awesome [rcm][]
 to manage the files and [prezto][] as the main (zsh) framework. Please take in
 mind this config assumes prezto installed, so a lot of stuff it's likely not to
 work as intended if you don't have to.
-
-Also, I'm still fighting with systemd, so some **really** important files like
-zshrc, zshenv and zprofile are missing.
 
 ### Prerequisites
 
@@ -65,6 +66,7 @@ Right now this project makes use of some submodules:
   try to jump to use something **so** experimental~~
 + My vim configuration (not yet available)
 + [Seebi's dircolors](https://github.com/seebi/dircolors-solarized)
++ [base16 colors](https://github.com/chriskempson/base16) for the shell and xresources
 
 Rationale
 ---------
