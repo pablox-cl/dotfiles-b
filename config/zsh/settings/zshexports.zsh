@@ -8,9 +8,9 @@ else
   TERM=xterm-256color
 fi
 
-# dircolors
+# ===== Dircolors
 # https://github.com/seebi/dircolors-solarized
-[[ -d $HOME/.dircolors ]] && eval `dircolors ${HOME}/.dircolors/dircolors.256dark`
+[[ -d $HOME/.config/shell-colors/dircolors-solarized ]] && eval $(dircolors ${XDG_CONFIG_HOME}/shell-colors/dircolors-solarized/dircolors.256dark)
 
 # improve Less input preprocessor
 if (( $+commands[source-highlight] )); then
@@ -28,4 +28,3 @@ MANWIDTH=80 # make sure man pages doesn't overflow
 PACKER_CACHE_DIR=$XDG_CACHE_HOME/packer
 
 export GREP_COLOR MANWIDTH TERM HISTSIZE PACKER_CACHE_DIR
-
