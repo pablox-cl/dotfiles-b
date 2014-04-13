@@ -114,6 +114,10 @@ fi
 # Load super secret stuff
 [[ -s $HOME/.secrets ]] && source $HOME/.secrets
 
+#
+# Startup
+#
+
 [[ $TTY == /dev/tty1 ]] \
   && (( $UID )) \
   && [[ -z $DISPLAY ]]  \
