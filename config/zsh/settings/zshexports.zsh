@@ -4,8 +4,6 @@
 # export screen-256color for tmux
 if [[ -n $TMUX ]]; then
   TERM=screen-256color
-else
-  TERM=xterm-256color
 fi
 
 # ===== Dircolors
