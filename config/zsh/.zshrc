@@ -56,6 +56,15 @@ for dir in $config_dirs; do
 done
 
 #
+# Miscellaneous
+#
+
+# Load vte magic
+# If this file does not exist, it is likely the vte packages is missing.
+# In Arch Linux the package is called `vte3`.
+[[ -s /etc/profile.d/vte.sh ]] && source /etc/profile.d/vte.sh
+
+#
 # Third party
 #
 
@@ -66,4 +75,3 @@ if [[ -s "${HOME}/.tmux-powerlinerc" ]]; then
 fi
 
 unset functions_path config_{files,dirs}
-

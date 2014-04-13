@@ -106,11 +106,6 @@ fi
 # Miscellaneous
 #
 
-# Load vte magic
-# If this file doesn't exist it's likely the vte package is missing.
-# In Arch Linux the package is called `vte3`.
-[[ -s /etc/profile.d/vte.sh ]] && source /etc/profile.d/vte.sh
-
 # Load super secret stuff
 [[ -s $HOME/.secrets ]] && source $HOME/.secrets
 
