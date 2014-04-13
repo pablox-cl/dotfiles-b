@@ -61,7 +61,6 @@ path=(
   ${HOME}/bin
   ${HOME}/.npm/npm-packages/bin
   ${HOME}/.cabal/bin
-  # /usr/local/{bin,sbin} # is this necessary on Arch Linux?
   $path
 )
 
