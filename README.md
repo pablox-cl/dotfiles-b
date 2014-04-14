@@ -67,6 +67,7 @@ Right now this project makes use of some submodules:
 + My vim configuration (not yet available)
 + [Seebi's dircolors](https://github.com/seebi/dircolors-solarized)
 + [base16 colors](https://github.com/chriskempson/base16) for the shell and xresources
++ My configuration is heavily based on [Meslo (patched) Font](https://github.com/Lokaltog/powerline-fonts/tree/master/Meslo)
 
 Rationale
 ---------
