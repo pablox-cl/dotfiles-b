@@ -1,0 +1,43 @@
+# zathurarc-light
+# based on base16 (built with base16-builder)
+# original work: https://github.com/esn89/base16-zathura
+
+set default-bg                  "#e0e0e0" #06
+set default-fg                  "#202020" #01
+
+set statusbar-fg                "#303030" #02
+set statusbar-bg                "#b0b0b0" #04
+
+set inputbar-bg                 "#151515" #00 currently not used
+set inputbar-fg                 "#303030" #02
+
+set notification-error-bg       "#ac4142" #08
+set notification-error-fg       "#e0e0e0" #06
+
+set notification-warning-bg     "#ac4142" #08
+set notification-warning-fg     "#e0e0e0" #06
+
+set highlight-color             "#f4bf75" #0A
+set highlight-active-color      "#ac4142" #08
+
+set completion-highlight-fg     "#d0d0d0" #05
+set completion-highlight-bg     "#75b5aa" #0C
+
+set completion-bg               "#d0d0d0" #05
+set completion-fg               "#75b5aa" #0C
+
+set notification-bg             "#90a959" #0B
+set notification-fg             "#f5f5f5" #07
+
+set recolor-lightcolor          "#e0e0e0" #06
+set recolor-darkcolor           "#303030" #02
+set recolor                     "true"
+
+# setting recolor-keephue true will keep any color your pdf
+# has.  If it is set to false, it will just be shades of
+# gray.  (lol 50 shades of gray)
+set recolor-keephue             "true"
+
+# Rest of your configs go here:
+
+set font                        "Meslo LG S DZ for Powerline 9"
