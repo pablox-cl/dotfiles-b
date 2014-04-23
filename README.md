@@ -3,19 +3,18 @@ Dotfiles
 
 > Never leave home without them
 
-**ALERT: I had to push force this, so sorry if somebody uses this. I mostly
-ordered stuff here, so I didn't change anything. I suggest to remove everything
-and clone this repo again.**
+> **ALERT: I had to push force this, so sorry if somebody uses this. I mostly
+  ordered stuff here, so I didn't change anything. I suggest to remove everything
+  and clone this repo again.**
 
 A *n*-times try to keep my dotfiles managed. This time with the awesome [rcm][]
-to manage the files and [prezto][] as the main (zsh) framework. Please take in
+to manage the dotfiles and [prezto][] as the main (zsh) framework. Please take in
 mind this config assumes prezto installed, so a lot of stuff it's likely not to
-work as intended if you don't have to.
+work as intended if you don't have it.
 
 ### Prerequisites
 
-+ Zsh 4.3.10 (though I'm using 5.0.2, so I *guess* it's okay)
-+ Prezto
++ Zsh 4.3.10 (though I'm using 5.0.5, so I *guess* it's okay)
 + ~~Correctly configured `systemd --user` (optional)~~
 
 Install
@@ -24,7 +23,7 @@ Install
 1. Install [rcm][]
 2. Clone the dotfiles:
 
-        git clone https://github.com/PaBLoX-CL/dotfiles.git ~/.dotfiles
+        git clone https://github.com/PaBLoX-CL/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
 
 3. View what would be installed
 
@@ -43,31 +42,25 @@ Install
 What's included?
 ----------------
 
-My config it's a bit opinionated, so there are a couple of things you have to
+My config it's opinionated, so there are a couple of things you have to
 have in mind:
 
 + When it's possible, configs will try to match vim style
-+ I use GNU/Linux (Arch Linux to be more precise), so I'm likely going to strip
-  references to OSX.
-+ While some submodules could look that they are lagging behind the original
-  repo, I'm only going to update them while there's something really interesting
-  to add, in the meanwhile of course, I keep them updated on my local machine.
-  That's because I don't like those superfluous "merge commits" (if you know how
-  to avoid that, please tell me).
++ Assumes [prezto][] installed
++ My configuration is heavily based on [Meslo (patched) Font](https://github.com/Lokaltog/powerline-fonts/tree/master/Meslo)
 
 ### External stuff (*aka* submodules)
 
 Right now this project makes use of some submodules:
 
-+ My [own fork](https://github.com/PaBLoX-CL/prezto) of Prezto (which right now is
-  almost exactly as Prezto)
++ ~~My [own fork](https://github.com/PaBLoX-CL/prezto) of Prezto (which right now is
+  almost exactly as Prezto)~~ (I'm done trying to keep a fork updated, it's a PITA)
 + ~~My [systemd-user-units](https//github.com/PaBLoX-CL/systemd-user-units). This
   likely can be ignored because it only makes sense if you are crazy enough to
   try to jump to use something **so** experimental~~
 + My vim configuration (not yet available)
 + [Seebi's dircolors](https://github.com/seebi/dircolors-solarized)
 + [base16 colors](https://github.com/chriskempson/base16) for the shell and xresources
-+ My configuration is heavily based on [Meslo (patched) Font](https://github.com/Lokaltog/powerline-fonts/tree/master/Meslo)
 
 Rationale
 ---------
@@ -76,7 +69,7 @@ I decided to build my own "dotfiles" because that's the only way to really
 understand what's going on below, I chose prezto because it doesn't interfere
 too much with the normal functioning of the zsh shell and has sane defaults.
 
-I tried to make this little project with all the  documentation as possible,
+I tried to make this little project with all the documentation as possible,
 because I found that's one of the easiest (and most fun) ways to learn. So you
 are likely going to found a lot of comments and text.
 
@@ -84,8 +77,8 @@ are likely going to found a lot of comments and text.
 it's a great article to understand why I made some decisions about the structure
 and organization.
 
-I also tried to make this as delete friendly as possible, so you can strip and
-take what you found interesting.
+I also made this as *delete friendly* as possible, so you can strip and take what
+you found interesting.
 
 Bugs
 ----
