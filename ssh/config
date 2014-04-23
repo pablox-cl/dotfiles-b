@@ -17,4 +17,4 @@ Host dh
 
 Host dhps
   HostName ps160328.dreamhostps.com
-
+  IdentityFile ~/.ssh/id_rsa.dhps
