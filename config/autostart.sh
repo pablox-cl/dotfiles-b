@@ -3,8 +3,6 @@
 # ~/.dropbox-dist/dropboxd &
 ( /opt/dropbox/dropbox ) &
 
-( urxvtd -f -q -o ) &
-
 ( gnome-do ) &
 
 ( numlockx on ) &
