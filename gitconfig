@@ -34,5 +34,7 @@
 	mnemonicprefix = true
 [rebase]
 	autosquash = true
+[branch]
+	autosetuprebase = always
 
 # vim: set filetype=gitconfig noexpandtab shiftwidth=4 tabstop=4:
