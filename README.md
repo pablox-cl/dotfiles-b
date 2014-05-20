@@ -15,7 +15,6 @@ work as intended if you don't have it.
 ### Prerequisites
 
 + Zsh 4.3.10 (though I'm using 5.0.5, so I *guess* it's okay)
-+ ~~Correctly configured `systemd --user` (optional)~~
 
 Install
 -------
@@ -51,13 +50,9 @@ have in mind:
 
 ### External stuff (*aka* submodules)
 
-Right now this project makes use of some submodules:
+Right now this project makes use of the following submodules:
 
-+ ~~My [own fork](https://github.com/PaBLoX-CL/prezto) of Prezto (which right now is
-  almost exactly as Prezto)~~ (I'm done trying to keep a fork updated, it's a PITA)
-+ ~~My [systemd-user-units](https//github.com/PaBLoX-CL/systemd-user-units). This
-  likely can be ignored because it only makes sense if you are crazy enough to
-  try to jump to use something **so** experimental~~
++ [prezto][]
 + My vim configuration (not yet available)
 + [Seebi's dircolors](https://github.com/seebi/dircolors-solarized)
 + [base16 colors](https://github.com/chriskempson/base16) for the shell and xresources

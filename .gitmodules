@@ -1,9 +1,6 @@
 [submodule "dircolors-solarized"]
 	path = config/shell-colors/dircolors-solarized
 	url = git://github.com/seebi/dircolors-solarized
-[submodule "config/systemd/user"]
-	path = config/systemd/user
-	url = git://github.com/PaBLoX-CL/systemd-user-units.git
 [submodule "base16-xresources"]
 	path = config/xcolors/base16
 	url = https://github.com/chriskempson/base16-xresources
