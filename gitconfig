@@ -1,6 +1,8 @@
 [user]
 	name = Pablo Olmos de Aguilera Corradini
 	email = pablo@glatelier.org
+[github]
+	user = PaBLoX-CL
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
