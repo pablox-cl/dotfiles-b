@@ -3,4 +3,4 @@
 git submodule update --init --recursive
 
 # dot-prefixed files are skipped unless explicitly named
-rcup -K config/zsh/{.zprofile,.zshenv,.zshrc}
+rcup -K config/zsh/{.zprofile,.zshenv,.zshrc,.zlogin,.zlogout}
