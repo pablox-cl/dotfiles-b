@@ -1,7 +1,6 @@
 # TODO: check if stuff exists first
 
-# ~/.dropbox-dist/dropboxd &
-( /opt/dropbox/dropbox ) &
+( dropboxd ) &
 
 ( gnome-do ) &
 
