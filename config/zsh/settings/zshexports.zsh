@@ -11,9 +11,9 @@ fi
 [[ -d $HOME/.config/shell-colors/dircolors-solarized ]] && eval $(dircolors ${XDG_CONFIG_HOME}/shell-colors/dircolors-solarized/dircolors.256dark)
 
 # ===== Base16 Shell
-BASE16_SCHEME="tomorrow"
-BASE16_SHELL="$XDG_CONFIG_HOME/shell-colors/base16/base16-$BASE16_SCHEME.dark.sh"
-[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+# BASE16_SCHEME="default"
+# BASE16_SHELL="$XDG_CONFIG_HOME/shell-colors/base16/base16-$BASE16_SCHEME.dark.sh"
+# [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 
 # improve Less input preprocessor
 if (( $+commands[source-highlight] )); then
