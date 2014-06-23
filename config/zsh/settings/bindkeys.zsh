@@ -24,3 +24,6 @@ bindkey -M viins '^Y' yank
 # See: https://github.com/zsh-users/zsh-syntax-highlighting/issues/99
 bindkey -M viins '^[y' yank-pop
 
+# Use Ctrl + Arrow
+bindkey -M viins '^[[1;5D' emacs-backward-word
+bindkey -M viins '^[[1;5C' emacs-forward-word
