@@ -60,7 +60,7 @@ done
 #
 
 # Load vte magic
-# If this file does not exist, it is likely the vte packages is missing.
+# If this file does not exist, it is likely the vte package is missing.
 # In Arch Linux the package is called `vte3`.
 [[ -s /etc/profile.d/vte.sh ]] && source /etc/profile.d/vte.sh
 
