@@ -17,6 +17,7 @@ alias pp='prepend'
 
 # modified commands
 alias grep='grep -i'
+alias ag='ag -i'
 alias du1='du --max-depth=1'
 alias mkdir='nocorrect mkdir -pv'
 alias ping='ping -c 4'
