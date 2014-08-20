@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
-git submodule update --init --recursive
-
 # dot-prefixed files are skipped unless explicitly named
-rcup -K config/zsh/{.zprofile,.zshenv,.zshrc,.zlogin,.zlogout}
+rcup -K config/zsh/{.zprofile,.zshenv,.zshrc,.zlogin,.zlogout,.zpreztorc}
+
+# prezto has to be linked by hand, because it's skipped, and forcing
+# rcup results in ignores SYMLINK_DIRS
+ln -s ${HOME}/config/zsh/.zprezto ${HOME}/.config/zsh/.zprezto
