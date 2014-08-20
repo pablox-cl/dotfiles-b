@@ -10,4 +10,6 @@
 
 ( xcape ) &
 
+( nm-applet ) &
+
 ( tomboy --tray ) &
