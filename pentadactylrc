@@ -1,4 +1,4 @@
-"1.0rc1
+"1.1
 
 loadplugins '\.(js|penta)$'
 group user
@@ -26,18 +26,20 @@ map , <Leader>
 set defsearch=duckduckgo
 
 " Commands
-command! addToDelicious -js
-  \ gBrowser.addTab('http://delicious.com/save?title='
-  \ +encodeURIComponent(content.document.title)+'&url='
-  \ +encodeURIComponent(content.location.href)+'&notes='
-  \ +encodeURIComponent(content.getSelection())+'&sref=shareaholic');
+" command! addToDelicious -js
+"   \ gBrowser.addTab('http://delicious.com/save?title='
+"   \ +encodeURIComponent(content.document.title)+'&url='
+"   \ +encodeURIComponent(content.location.href)+'&notes='
+"   \ +encodeURIComponent(content.getSelection())+'&sref=shareaholic');
 
 "command! addToKippt -js
   "\ gBrowser.addTab(plugins.addto.kippt());
 
 " Mappings
-map <Leader>ad -ex addToDelicious
+" map <Leader>ad -ex addToDelicious
 "map <Leader>ak -ex addToKippt
+map <Leader>t -ex emenu View.Sidebar.Todoist
+map <Leader>k -ex emenu Bookmarks.Bookmarklets.Kippt It
 
 " Styling
 " http://www.fantascienza.net/leonardo/ar/inconsolatag/inconsolata-g_font.zip
@@ -46,4 +48,4 @@ highlight FontFixed -append font: 12px "Inconsolata-g"
 " Run a wrapper for gvim so I can set the `PYTHONPATH` variable correctly there
 set editor='~/bin/gvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
 
-" vim: set ft=vim:
+" vim: set ft=pentadactyl:
