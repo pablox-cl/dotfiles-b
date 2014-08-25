@@ -8,7 +8,7 @@ fi
 
 # ===== Dircolors
 # https://github.com/seebi/dircolors-solarized
-[[ -d $HOME/.config/shell-colors/dircolors-solarized ]] && eval $(dircolors ${XDG_CONFIG_HOME}/shell-colors/dircolors-solarized/dircolors.256dark)
+[[ -d ${XDG_CONFIG_HOME:-$HOME/.config}/shell-colors/dircolors-solarized ]] && eval $(dircolors ${XDG_CONFIG_HOME:-$HOME/.config}/shell-colors/dircolors-solarized/dircolors.256dark)
 
 # ===== Base16 Shell
 # BASE16_SCHEME="default"
