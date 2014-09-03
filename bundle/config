@@ -1,5 +1,6 @@
 ---
 BUNDLE_PATH: vendor/bundle
+BUNDLE_JOBS: 4
 
 # Sam Stephenson suggests doing it by hand, rather than make it default
 # for everything.
