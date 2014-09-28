@@ -27,3 +27,7 @@ function ssh-keygen() {
   fi
 }
 
+
+function simple-ssh-keygen() {
+  command ssh-keygen -t rsa -b 2048 -f $HOME/.ssh/id_rsa.$1 -C "$(whoami)@$(hostname)-$(date -I)"
+}
