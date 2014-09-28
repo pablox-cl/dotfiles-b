@@ -21,3 +21,9 @@ Host dh
 Host dhps
   HostName ps160328.dreamhostps.com
   IdentityFile ~/.ssh/id_rsa.dhps
+
+Host homeone
+  IdentityFile ~/.ssh/id_ecdsa.homeone
+
+Host lusankya
+  IdentityFile ~/.ssh/id_ecdsa.lusankya
