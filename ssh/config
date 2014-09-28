@@ -12,6 +12,9 @@ Host github.com
 Host linode
   IdentityFile ~/.ssh/id_ecdsa.linode
 
+Host do-linuxlsc
+  IdentityFile ~/.ssh/id_ecdsa.digital-ocean
+
 Host dh
   HostName agba.dreamhost.com
 
