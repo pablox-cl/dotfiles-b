@@ -24,6 +24,7 @@ map , <Leader>
 
 " Set duckduckgo as the default search engine
 set defsearch=duckduckgo
+set defsearch=d
 
 " Commands
 " command! addToDelicious -js
@@ -40,6 +41,10 @@ set defsearch=duckduckgo
 "map <Leader>ak -ex addToKippt
 map <Leader>t -ex emenu View.Sidebar.Todoist
 map <Leader>k -ex emenu Bookmarks.Bookmarklets.Kippt It
+
+" bring back/hide the main toolbar
+map -builtin <silent> cot :set guioptions+=T<CR>
+map -builtin <silent> coT :set guioptions-=T<CR>
 
 " Styling
 " http://www.fantascienza.net/leonardo/ar/inconsolatag/inconsolata-g_font.zip
