@@ -1,0 +1,30 @@
+{
+  "segments": {
+    "right": [
+      {
+        "function": "powerline.segments.common.bat.battery"
+      },
+      {
+        "function": "powerline.segments.common.time.date",
+        "before": "",
+        "args": {
+          "format": "%d.%m.%Y"
+        }
+      },
+      {
+        "function": "powerline.segments.common.time.date",
+        "name": "time",
+        "args": {
+          "format": "%H:%M",
+          "istime": true
+        }
+      },
+      {
+        "function": "powerline.segments.common.net.hostname",
+        "args": {
+          "only_if_ssh": true
+        }
+      }
+    ]
+  }
+}
