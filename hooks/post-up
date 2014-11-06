@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# localectl set-x11-keymap 'latam,us,us(colemak)' '' '' 'grp:shifts_toggle,ctrl:nocaps,compose:menu,terminate:ctrl_alt_bksp'
+
 # dot-prefixed files are skipped unless explicitly named
 rcup -K config/zsh/{.zprofile,.zshenv,.zshrc,.zlogin,.zlogout,.zpreztorc}
 
