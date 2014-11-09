@@ -7,3 +7,4 @@ fi
 alias gws='git status --ignore-submodules=${_git_status_ignore_submodules}'
 alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
 
+alias gcv='git commit --verbose'
