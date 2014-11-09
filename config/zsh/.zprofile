@@ -85,8 +85,9 @@ export XDG_CACHE_HOME XDG_CONFIG_HOME XDG_DATA_HOME RCRC GNUPGHOME
 export LESS='-g -i -M -R -S -w -z-4'
 
 # Set the Less input preprocessor.
-if (( $+commands[lesspipe.sh] )); then
-  export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
+# Try both `lesspipe` and `lesspipe.sh` as either might exist on a system.
+if (( $#commands[(i)lesspipe(|.sh)] )); then
+  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
 #
@@ -117,5 +118,6 @@ fi
 [[ $TTY == /dev/tty1 ]] \
   && (( $UID )) \
   && [[ -z $DISPLAY ]]  \
-  && startx 2>! "$XDG_RUNTIME_DIR"/xsession-errors
+  && startx
+  # && startx 2> "$XDG_RUNTIME_DIR"/xsession-errors
   # && systemctl --user start wm.target

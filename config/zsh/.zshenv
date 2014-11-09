@@ -36,4 +36,3 @@ fpath=(
 
 # Autoload functions
 autoload -Uz $ZDOTDIR/functions/^*.*sh(:t)
-
