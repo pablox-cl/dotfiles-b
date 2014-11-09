@@ -41,4 +41,3 @@ case $1 in
   xmonad) autostart; exec xmonad;;
   *) autostart; exec xmonad;;
 esac
-
