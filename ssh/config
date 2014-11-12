@@ -12,9 +12,6 @@ Host github.com
 Host linode
   IdentityFile ~/.ssh/id_ecdsa.linode
 
-Host do-linuxlsc
-  IdentityFile ~/.ssh/id_ecdsa.digital-ocean
-
 Host dh
   HostName agba.dreamhost.com
 
@@ -27,3 +24,7 @@ Host homeone
 
 Host lusankya
   IdentityFile ~/.ssh/id_ecdsa.lusankya
+
+Host do
+  HostName owncloud.odac.co
+  IdentityFile ~/.ssh/id_rsa.owncloud_do
