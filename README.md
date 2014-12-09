@@ -32,11 +32,16 @@ Install
 
         RCRC="config/rcrc" rcup
 
-4. Update submodules
+4. Install Prezto & its submodules
 
+        git clone https://github.com/sorin-ionescu/prezto ~/.dotfiles/config/zsh/.zprezto && cd ~/.dotfiles/config/zsh/.zprezto && git submodule update --init --recursive
+
+5. Update submodules
+
+        cd ~/.dotfiles
         git submodule update --init --recursive
 
-5. Profit!
+5. Profit! :moneybag:
 
 What's included?
 ----------------
