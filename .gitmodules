@@ -7,6 +7,3 @@
 [submodule "base16-shell"]
 	path = config/shell-colors/base16
 	url = https://github.com/chriskempson/base16-shell.git
-[submodule "config/zsh/.zprezto"]
-	path = config/zsh/.zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
