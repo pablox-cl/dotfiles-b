@@ -8,3 +8,5 @@ alias gws='git status --ignore-submodules=${_git_status_ignore_submodules}'
 alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
 
 alias gcv='git commit --verbose'
+
+alias gll='git log --topo-order --pretty=oneline --abbrev-commit --graph --decorate --all'
