@@ -1,5 +1,6 @@
-# backup files
+# backup/temp files
 *.bak
+*.tmp
 
 # vim files
 *.s[a-w][a-z]
@@ -20,3 +21,15 @@ Session.vim
 
 # compiled dynamic libraries
 *.so
+
+# tags
+tags
+
+# personal files
+.env
+
+# database
+*.sql
+*.sqlite
+
+*.log
