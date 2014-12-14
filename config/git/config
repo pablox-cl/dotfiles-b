@@ -5,7 +5,7 @@
 	user = PaBLoX-CL
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.config/git/ignore
 	autocrlf = input
 [merge]
 	tool = meld
