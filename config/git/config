@@ -7,9 +7,12 @@
 	editor = vim
 	excludesfile = ~/.config/git/ignore
 	autocrlf = input
+[help]
+	autocorrect = 1
 [merge]
 	tool = meld
 	defaultToUpstream = true
+	ff = only
 [alias]
 	st = status
 	co = checkout
