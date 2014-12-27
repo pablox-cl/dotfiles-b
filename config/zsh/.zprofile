@@ -116,8 +116,8 @@ fi
 #
 
 [[ $TTY == /dev/tty1 ]] \
+  # Since Xorg 1.16, redirecting to stderr doesn't work
   && (( $UID )) \
   && [[ -z $DISPLAY ]]  \
   && startx
-  # && startx 2> "$XDG_RUNTIME_DIR"/xsession-errors
   # && systemctl --user start wm.target
