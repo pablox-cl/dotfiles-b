@@ -115,8 +115,8 @@ fi
 # Startup
 #
 
+# Since Xorg 1.16, redirecting to stderr doesn't work
 [[ $TTY == /dev/tty1 ]] \
-  # Since Xorg 1.16, redirecting to stderr doesn't work
   && (( $UID )) \
   && [[ -z $DISPLAY ]]  \
   && startx
