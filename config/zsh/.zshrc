@@ -14,7 +14,7 @@ else
 fi
 
 # Working dir for developing
-PZT_PROJECT_DIR=${HOME}/dev
+PZT_PROJECT_DIR=${HOME}/code
 
 #
 # Main configuration
