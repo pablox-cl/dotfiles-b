@@ -1,11 +1,5 @@
 # ZSH Exports
 
-# ===== Setup terminal
-# export screen-256color for tmux
-if [[ -n $TMUX ]]; then
-  TERM=screen-256color
-fi
-
 # ===== Dircolors
 # https://github.com/seebi/dircolors-solarized
 [[ -d ${XDG_CONFIG_HOME:-$HOME/.config}/shell-colors/dircolors-solarized ]] && eval $(dircolors ${XDG_CONFIG_HOME:-$HOME/.config}/shell-colors/dircolors-solarized/dircolors.256dark)
@@ -30,4 +24,4 @@ HISTSIZE=20000
 MANWIDTH=80 # make sure man pages doesn't overflow
 PACKER_CACHE_DIR=$XDG_CACHE_HOME/packer
 
-export GREP_COLOR MANWIDTH TERM HISTSIZE PACKER_CACHE_DIR
+export GREP_COLOR MANWIDTH HISTSIZE PACKER_CACHE_DIR
