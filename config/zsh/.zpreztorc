@@ -34,15 +34,15 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'archive' \
-  'syntax-highlighting' \
-  'prompt' \
   'git' \
   'helper' \
-  'history-substring-search' \
   'pacman' \
   'fasd' \
   'gpg' \
-  'ruby'
+  'ruby' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'
 
 #
 # Editor
