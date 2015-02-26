@@ -20,6 +20,9 @@ setopt EXTENDED_GLOB
 # Functions
 #
 
+# Needed while we do the function magic
+setopt EXTENDED_GLOB
+
 # Add a function path
 # NOTE: fpath doesn't recurse directories so they have to be add explicitily
 functions_path=( themes functions completions )
@@ -36,3 +39,4 @@ fpath=(
 
 # Autoload functions
 autoload -Uz $ZDOTDIR/functions/^*.*sh(:t)
+unsetopt EXTENDED_GLOB
