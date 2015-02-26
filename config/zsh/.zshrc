@@ -10,8 +10,7 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 else
-  echo 'Prezo not installed!. Exiting.'
-  exit 1
+  echo 'Prezto not installed!.'
 fi
 
 # Working dir for developing
