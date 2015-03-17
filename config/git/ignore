@@ -33,3 +33,6 @@ tags
 *.sqlite
 
 *.log
+
+# pry history file
+.pry_history.rb
