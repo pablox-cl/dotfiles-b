@@ -8,3 +8,7 @@
 #   $path
 # )
 
+path=(
+  ${HOME}/.local/bin
+  $path
+)
