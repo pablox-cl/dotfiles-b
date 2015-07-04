@@ -19,23 +19,6 @@
 # }
 
 #
-# Browser
-#
-
-BROWSER='firefox'
-
-#
-# Editors
-#
-
-EDITOR='vim'
-VISUAL='gvim'
-PAGER='less'
-SUDO_EDITOR='vim' # to use sudoedit (or sudo -e)
-
-export BROWSER EDITOR VISUAL PAGER SUDO_EDITOR
-
-#
 # Language
 #
 

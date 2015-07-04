@@ -1,0 +1,16 @@
+# fix steam closing
+STEAM_FRAME_FORCE_CLOSE=1
+
+# tools
+BROWSER=firefox
+EDITOR=vim
+VISUAL=gvim
+SUDO_EDITOR=vim
+TERMINAL=termite
+PAGER=less
+DIFFTOOL=meld
+
+# bspwm
+BSPWM_TREE=/tmp/bspwm.tree
+BSPWM_HISTORY=/tmp/bspwm.history
+BSPWM_STACK=/tmp/bspwm.stack
