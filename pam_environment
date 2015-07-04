@@ -14,3 +14,6 @@ DIFFTOOL=meld
 BSPWM_TREE=/tmp/bspwm.tree
 BSPWM_HISTORY=/tmp/bspwm.history
 BSPWM_STACK=/tmp/bspwm.stack
+
+# https://wiki.archlinux.org/index.php/Java#Non-reparenting_window_managers
+_JAVA_AWT_WM_NONREPARENTING=1
