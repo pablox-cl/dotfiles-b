@@ -1,0 +1,5 @@
+# build_directory=/tmp/aurget/
+edit_pkgbuilds=never
+keep_devels=false
+resolve_dependencies=true
+# vim: filetype=sh:
