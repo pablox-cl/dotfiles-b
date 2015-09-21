@@ -36,3 +36,7 @@ tags
 
 # pry history file
 .pry_history.rb
+
+# cabal/haskell
+.cabal-sandbox
+cabal.sandbox.config
