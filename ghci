@@ -1,5 +1,8 @@
 -- useful when debugging xmonad
 -- -i flag means it add those directories to the files ghci searches for
 
-:set -ilib
-:set -iconfig
+:set prompt "λ> "
+:set -isrc
+:set -itest
+-- :set -ilib
+-- :set -iconfig

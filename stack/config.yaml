@@ -1,0 +1,14 @@
+# I use ~/.local/bin myself
+local-bin-path: /home/pablo/.stack/bin
+
+# Don't use system GHC and install as needed
+system-ghc: false
+install-ghc: true
+
+templates:
+  params:
+    author-email: pablo+haskell@odac.co
+    author-name: Pablo Olmos de Aguilera
+    category: Network
+    copyright: 2016 Pablo Olmos de Aguilera
+    github-username: PaBLoX-CL

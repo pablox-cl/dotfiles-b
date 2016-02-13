@@ -34,7 +34,7 @@ typeset -gU cdpath fpath mailpath path
 # I manage some binaries and scripts on my ~/bin directory, so I add it first
 path=(
   ${HOME}/.npm/npm-packages/bin
-  ${HOME}/.cabal/bin
+  ${HOME}/.stack/bin
   $path
 )
 
