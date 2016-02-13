@@ -14,6 +14,7 @@ bindkey -M viins '^A' beginning-of-line
 bindkey -M viins '^E' end-of-line
 
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins 'jk' vi-cmd-mode
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '^R' history-incremental-search-backward
 
