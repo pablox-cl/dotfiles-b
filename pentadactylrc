@@ -3,8 +3,8 @@
 loadplugins '\.(js|penta)$'
 group user
 
-" Hide everything but the bookmarks toolbar and tabs
-set guioptions=bBCrs
+" Only remove menu bar, keep toolbar and bookmark bar
+set guioptions=bBCrsT
 
 " Bypass pentadactyl on google websites
 " autocmd LocationChange google.com :normal! <C-z>
