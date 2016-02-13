@@ -11,6 +11,12 @@ set guioptions=bBCrsT
 set passkeys+=mail.google.com:'!#*+-./<C-Down><C-s><Enter>?INU[]acefjk lmnopqrsuvxyz',*a,*n,*r,*s,*t,*u,ga,gc,gd,gi,gl,gs,gt,yo
 set strictfocus+=mail.google.com:laissez-faire
 
+" Bypass pentadactyl on FastMail
+set passkeys+=www.fastmail.com:acdefgjkmnoprsuxyz.;:!#%/*,<A-r>,<S-e><S-g><S-l><S-x>,<Space>,<S-Space>,<Esc>,<Enter>,<C-Enter>
+set passkeys+=www.fastmail.com/contacts/:ejknrsxz#/,<S-x>,<C-s>,<Esc>,<Del>
+set passkeys+=www.fastmail.com/calendar/:cgjknotvz,<C-z>,<C-S-z>,<Esc>
+set passkeys+=www.fastmail.com/notes/:enjksz#/,<Esc>,<C-s>,<Del>
+
 " Bypass pentadactyl on DuckDuckGo
 "set passkeys+=duckduckgo.com:"!/<Enter><C-Enter>ldvjkhrsm1"
 "set strictfocus+=duckduckgo.com:laissez-faire
