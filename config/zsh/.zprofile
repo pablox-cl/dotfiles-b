@@ -89,8 +89,8 @@ fi
 #
 
 # Since Xorg 1.16, redirecting to stderr doesn't work
-[[ $TTY == /dev/tty1 ]] \
-  && (( $UID )) \
-  && [[ -z $DISPLAY ]]  \
-  && startx
-  # && systemctl --user start wm.target
+# [[ $TTY == /dev/tty1 ]] \
+#   && (( $UID )) \
+#   && [[ -z $DISPLAY ]]  \
+#   && startx
+#   # && systemctl --user start wm.target
