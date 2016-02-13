@@ -10,8 +10,7 @@ if (( ! $+commands[go] )); then
 fi
 
 export GOPATH=~/.go
-export PATH="$PATH:$GOPATH/bin"
 path=(
-  ${HOME}/.go/bin
+  $GOPATH/bin
   $path
 )
