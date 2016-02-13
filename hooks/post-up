@@ -1,5 +1,18 @@
 #!/usr/bin/env sh
 
+setup_rbenv() {
+  if [ ! -d $HOME/.rbenv  ]; then
+    git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+    git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
+    git clone https://github.com/rbenv/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+    git clone https://github.com/tpope/rbenv-communal-gems.git ~/.rbenv/plugins/rbenv-communal-gems
+    git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins/rbenv-binstubs
+    exec $SHELL
+    rbenv communize --all
+  fi
+}
+
 # localectl set-x11-keymap 'latam,us,us(colemak)' '' '' 'grp:shifts_toggle,ctrl:nocaps,compose:menu,terminate:ctrl_alt_bksp'
 
 # dot-prefixed files are skipped unless explicitly named
@@ -9,4 +22,9 @@ rcup -K config/zsh/{.zprofile,.zshenv,.zshrc,.zlogin,.zlogout,.zpreztorc}
 # rcup results in ignores SYMLINK_DIRS
 if [ ! -h ${HOME}/.config/zsh/.zprezto ]; then
   ln -s ${HOME}/.dotfiles/config/zsh/.zprezto ${HOME}/.config/zsh/.zprezto
+fi
+
+if [ ! -f .first-run ]; then
+  read -q "RBENV?Do you want to setup rbenv?"
+  [ -n $RBENV ] && setup_rbenv
 fi
