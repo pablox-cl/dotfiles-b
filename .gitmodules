@@ -2,7 +2,7 @@
 	path = config/shell-colors/dircolors-solarized
 	url = git://github.com/seebi/dircolors-solarized
 [submodule "base16-xresources"]
-	path = config/xcolors/base16
+	path = tag-gui/config/xcolors/base16
 	url = https://github.com/chriskempson/base16-xresources
 [submodule "base16-shell"]
 	path = config/shell-colors/base16
