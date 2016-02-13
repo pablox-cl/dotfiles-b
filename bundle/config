@@ -1,10 +1,15 @@
 ---
 BUNDLE_PATH: vendor/bundle
-BUNDLE_JOBS: 4
+BUNDLE_JOBS: '7' # 1 less than the number of cpus the machine actually have (nproc)
+BUNDLE_GEM__COC: 'true'
+BUNDLE_GEM__TEST: minitest
+BUNDLE_CONSOLE: pry
+BUNDLE_GEM__MIT: 'true'
+BUNDLE_DISABLE_SHARED_GEMS: '1'
 
 # Sam Stephenson suggests doing it by hand, rather than make it default
 # for everything.
-# https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs
+# https://github.com/rbenv/rbenv/wiki/Understanding-binstubs
 #
 # BUNDLE_BIN: vendor/bundle/bin
 
