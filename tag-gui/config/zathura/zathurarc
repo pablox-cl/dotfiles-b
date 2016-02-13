@@ -9,7 +9,7 @@ set statusbar-fg                "#303030" #02
 set statusbar-bg                "#b0b0b0" #04
 
 set inputbar-bg                 "#151515" #00 currently not used
-set inputbar-fg                 "#303030" #02
+# set inputbar-fg                 "#303030" #02
 
 set notification-error-bg       "#ac4142" #08
 set notification-error-fg       "#e0e0e0" #06
