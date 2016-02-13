@@ -24,7 +24,16 @@ if [ ! -h ${HOME}/.config/zsh/.zprezto ]; then
   ln -s ${HOME}/.dotfiles/config/zsh/.zprezto ${HOME}/.config/zsh/.zprezto
 fi
 
-if [ ! -f .first-run ]; then
-  read -q "RBENV?Do you want to setup rbenv?"
-  [ -n $RBENV ] && setup_rbenv
+if [ ! -f ./.first-run ]; then
+  echo "Do you want to setup rbenv? (y/n)"
+  read $RBENV
+  case "$RBENV" in
+    y|Y)
+      setup_rbenv
+      ;;
+    *)
+      echo "not configuring rbenv (this message won't appear again)"
+      [ ! -f ./.first-run ] && touch ./.first-run
+      ;;
+  esac
 fi
