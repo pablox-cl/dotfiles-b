@@ -5,14 +5,11 @@
 !
 ! ========
 !
-! Colorscheme stolen from pbrisbin:
-! + https://github.com/pbrisbin/dotfiles/blob/master/config/Xresources
-!
 ! The font fallback idea is taken from thisoldman:
 ! + https://bbs.archlinux.org/viewtopic.php?pid=1349107#p1349107
 !
 ! Meslo font (André Berg)
-! + https://github.com/Lokaltog/powerline-fonts/tree/master/Meslo
+! + https://github.com/powerline/powerline-fonts/tree/master/Meslo
 ! + https://github.com/andreberg/Meslo-Font
 
 Xft.autohint: 0
@@ -32,13 +29,10 @@ Xft.rgba: rgb
            xft:unifont:style=Medium:antialias=false
 
 ! not sure if this works
-URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
-URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12 URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
 
 URxvt*termName: rxvt-unicode
 
-*foreground:  #dcdcdc
-*background:  #000000
 
 URxvt*cursorBlink:  true
 URxvt*cursorColor:  #c1c9c9
@@ -56,35 +50,11 @@ URxvt.iso14755_52: false
 
 URxvt.perl-ext: default,url-select,clipboard
 URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.matcher.button: 1
 URxvt.url-select.launcher: /usr/bin/firefox -new-tab
 URxvt.url-select.underline: true
 
 URxvt*intensityStyles: false
-
-!black
-*.color0: #222222
-*.color8: #454545
-!red
-*.color1: #9E5641
-*.color9: #CC896D
-!green
-*.color2: #6C7E55
-*.color10: #7DB37D
-!yellow
-*.color3: #CAAF2B
-*.color11: #BFB556
-!blue
-*.color4: #4c8ea1
-*.color12: #6bc1d0
-!magenta
-*.color5: #956D9D
-*.color13: #C18FCB
-!cyan
-*.color6: #7C9AA6
-*.color14: #8FADBF
-!white
-*.color7: #909090
-*.color15: #FFFFFF
 
 ! Fix <Ctrl> <Arrow> issue
 
@@ -92,6 +62,8 @@ URxvt*keysym.Control-Up:     \033[1;5A
 URxvt*keysym.Control-Down:   \033[1;5B
 URxvt*keysym.Control-Left:   \033[1;5D
 URxvt*keysym.Control-Right:  \033[1;5C
+
+#include "xcolors/xtheme1"
 
 ! vim: ft=xdefaults
 
