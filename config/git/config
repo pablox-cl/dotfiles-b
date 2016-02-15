@@ -15,14 +15,16 @@
 	ff = only
 [alias]
 	st = status
-	co = checkout
-	ci = commit
+	ca = commit --amend
 	cl = clone
+	ci = commit --verbose
+	co = checkout
 	br = branch
 	add = add -v
 	incoming = "!git remote update -p; git log ..@{u}"
 	outgoing = log @{u}..
 	whatsnew = log ...@{u}
+	recommit = "!f() { git commit --amend --no-edit; }; f"
 [color]
 	diff = auto
 	status = auto
@@ -39,5 +41,11 @@
 	autosquash = true
 [branch]
 	autosetuprebase = always
+[url "git@github.com:PaBLoX-CL/"]
+	pushInsteadOf = "https://github.com/PaBLoX-CL/"
+[init]
+	templatedir = ~/.config/git/template
+[fetch]
+	prune = true
 
 # vim: set filetype=gitconfig noexpandtab shiftwidth=4 tabstop=4:
