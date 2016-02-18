@@ -12,6 +12,12 @@ to manage the dotfiles and [prezto][] as the main (zsh) framework. Please take i
 mind this config assumes prezto installed, so a lot of stuff it's likely not to
 work as intended if you don't have it.
 
+### Screenshots
+
+![Busy Screenshot using bspwm](http://i.imgur.com/eUNgHcb.png)
+
+![Empty Screenshot using bspwm](http://i.imgur.com/vSsYcJj.png)
+
 ### Prerequisites
 
 + terminal
