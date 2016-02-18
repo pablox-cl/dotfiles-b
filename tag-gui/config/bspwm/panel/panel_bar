@@ -1,0 +1,151 @@
+#! /bin/sh
+
+. ./panel_colors
+
+CFBG="%{B$COLOR_FOCUSED_BG}"
+CFFG="%{F$COLOR_FOCUSED_FG}"
+MAINFG="%{F$COLOR_ACCENT}"
+
+MAIN_UND="%{+u}%{U$COLOR_ACCENT}"
+
+# AC='%{A:'           # start click area
+# AB=':}'             # end click area cmd
+# AE='%{A}'           # end click area
+
+# charmap
+# http://stackoverflow.com/questions/9834402/previewing-unicode-fonts-on-linux
+#
+LT=''              # tiled layout
+LM=""              # monocle layout
+
+DO=''              # occupied desktop
+DF=''              # free desktop
+
+# goto='bspc desktop -f'       # go to this desktop
+# cycle='bspc desktop -l next' # cycle tiled/monocle
+
+# logo="${CB1}${CF1}${AC}~/.config/bspwm/panel/scripts/spawn_dmenu${AB} $(hostname) ${CB2}${CF2}⮀${AE}"
+logo="${MAINFG}  %{F-}" # \ue00e
+
+num_mon=$(bspc query -M | wc -l)
+
+while read -r line ; do
+	case $line in
+		S*)
+			sys="%{r}%{F$COLOR_SYS_FG}${line#?}"
+			;;
+		T*)
+			# xtitle output
+			title="%{F$COLOR_TITLE_FG}${line#?}"
+			;;
+		W*)
+		# bspwm's state
+		wm="%{B-}"
+		IFS=':'
+		set -- ${line#?}
+		while [ $# -gt 0 ] ; do
+			item=$1
+			name=${item#?}
+			case $item in
+			[mM]*)
+				[ $num_mon -lt 2 ] && shift && continue
+				case $item in
+					m*)
+						# monitor
+						FG=$COLOR_MONITOR_FG
+						BG=$COLOR_MONITOR_BG
+						;;
+					M*)
+						# focused monitor
+						FG=$COLOR_FOCUSED_MONITOR_FG
+						BG=$COLOR_FOCUSED_MONITOR_BG
+						;;
+				esac
+				wm="${wm}%{F${FG}}%{B${BG}}%{A:bspc monitor -f ${name}:} ${name} %{A}%{B-}%{F-}"
+				;;
+			[fFoOuU]*)
+				case $item in
+					f*)
+						# free desktop
+						FG=
+						BG=
+						icon=$DF
+						;;
+					F*)
+						# focused free desktop
+						FG="$MAIN_UND $CFFG"
+						BG=$CFBG
+						icon=$DF
+						;;
+					o*)
+						# occupied desktop
+						FG=
+						BG=
+						icon=$DO
+						;;
+					O*)
+						# focused occupied desktop
+						FG="$MAIN_UND $CFFG"
+						BG=$CFBG
+						icon=$DO
+						;;
+					u*)
+						# urgent desktop
+						# leading space is not a typo
+						FG=" $MAINFG"
+						BG=
+						icon=$DO
+						;;
+					U*)
+						# focused urgent desktop
+						FG="$MAIN_UND $MAINFG"
+						BG=$CFBG
+						icon=$DO
+						;;
+				esac
+				wm="${wm}${BG}${FG:- }${icon}%{A:bspc desktop -f ${name}:} ${name} %{A}%{-u}%{B-}%{F-}"
+				;;
+			L*)
+				# layout
+				case $name in
+				T) # tiled
+					layout=$LT
+					;;
+				M) # monocle
+					layout=$LM
+					;;
+				esac
+				wm="${wm}${CFFG} %{A:bspc desktop -l next:}${layout}%{A}"
+				;;
+			T*)
+				# state
+				case $name in
+					# icons pending
+					T)
+						# tiled
+						state=
+						;;
+					F)
+						# floating
+						state=[fl]
+						;;
+					P)
+						# pseudo-tiled
+						state=[ps]
+						;;
+					=)
+						# full screen
+						state=[fs]
+						;;
+				esac
+				wm="${wm}${state:+ $state}"
+				;;
+			# G*)
+			# 	# flags # TODO
+			esac
+			shift
+		done
+		;;
+	esac
+	printf "%s\n" " $logo $wm $title $sys"
+done

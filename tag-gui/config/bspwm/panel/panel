@@ -1,0 +1,53 @@
+#! /bin/sh
+
+PANEL_FIFO=${TMPDIR}/bspwm-panel-fifo
+PANEL_WIDTH=$(xrandr  | grep \* | cut -d x -f1)
+PANEL_HEIGHT=20
+PANEL_FONT="-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-*"
+PANEL_WM_NAME=bspwm_panel
+
+if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
+    printf "%s\n" "The panel is already running." >&2
+    exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+cd $(dirname $0)
+
+. ./panel_colors
+
+bspc config top_padding $PANEL_HEIGHT
+bspc subscribe report > "$PANEL_FIFO" &
+
+xtitle -sf 'T%s' > "$PANEL_FIFO" &
+
+# conky -c ./panel_conky_$(hostname) > "$PANEL_FIFO" &
+./scripts/run_i3status -c ~/.config/i3status/simple.config > "$PANEL_FIFO" &
+
+trayer --height 20 --edge right --align left --margin 20 --widthtype request --transparent true --alpha 255 --tint 0x$COLOR_BACKGROUND &
+xdotool search --onlyvisible --class 'trayer' windowunmap
+
+./panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g x$PANEL_HEIGHT \
+-f "${PANEL_FONT}" \
+-f "-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1" \
+-f "-lucy-tewi-medium-r-normal-*-11-*-*-*-*-*-*-*" \
+-u 1 \
+-B "#e6151515" \
+-F "$COLOR_DEFAULT_FG" | sh &
+
+# -B "$COLOR_DEFAULT_BG" \
+
+wid=$(xdo id -a "$PANEL_WM_NAME")
+tries_left=20
+while [ -z "$wid" -a "$tries_left" -gt 0 ] ; do
+    sleep 0.05
+    wid=$(xdo id -a "$PANEL_WM_NAME")
+    tries_left=$((tries_left - 1))
+done
+[ -n "$wid" ] && xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$wid"
+
+wait

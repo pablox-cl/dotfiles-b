@@ -81,6 +81,8 @@ fi
 # Miscellaneous
 #
 
+export BSPWM_STATE=$TMPDIR/bspwm-state.json
+
 # Load super secret stuff
 [[ -s $HOME/.secrets ]] && source $HOME/.secrets
 

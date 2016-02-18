@@ -12,11 +12,6 @@ function autostart {
   fi
 }
 
-function start_bspwm() {
-  sxhkd &
-  exec bspwm
-}
-
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -46,7 +41,6 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-xset +fp /usr/share/fonts/misc
 xsetroot -cursor_name left_ptr  # fix mouse cursor
 feh --bg-scale ~/customize/wallpapers/wallpaper.jpg
 
@@ -56,6 +50,6 @@ case $1 in
   i3) exec i3 -V >> $XDG_CONFIG_HOME/i3/logs/log-$(date +'%F-%k-%M-%S') 2>&1;;
   gnome) exec gnome-session;;
   xmonad) exec xmonad;;
-  bspswm) start_bspwm;;
-  *) start_bspwm;;
+  bspswm) exec wm;;
+  *) exec wm;; # to allow bspwm loop. See ~/.local/bin/wm
 esac

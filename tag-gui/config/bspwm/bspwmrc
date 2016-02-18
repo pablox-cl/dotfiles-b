@@ -1,0 +1,56 @@
+#!/bin/sh
+
+start_sxhkd() {
+  local sxhkd_log=$XDG_DATA_HOME/sxhkd/sxhkd.log
+  local sxhkd_error_log=$XDG_DATA_HOME/sxhkd/sxhkd.error.log
+
+  echo -e "Start Sxhkd Log $(date +'%Y.%m.%d-%H:%M:%S')\n" | tee > $sxhkd_log | tee > $sxhkd_error_log
+  sxhkd 2>> $sxhkd_error_log >> $sxhkd_log
+}
+
+start_sxhkd &
+
+if [ -e "$BSPWM_STATE" ]; then
+  bspc wm -l "$BSPWM_STATE"
+  rm "$BSPWM_STATE"
+fi
+
+bspc config border_width        2
+bspc config window_gap          2
+
+#bspc config top_padding         15
+
+bspc config split_ratio         0.52
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+bspc config single_monocle      true
+bspc config focus_by_distance   true
+bspc config history_aware_focus true
+
+bspc config focus_follows_pointer true
+bspc config normal_border_color '#303030'
+bspc config focused_border_color '#FF0040' # crimson
+
+#
+# monitor setup
+#
+
+if bspc query -M | grep -q 'HDMI'; then
+  bspc monitor HDMI2 -n 1 -d I II III IV V
+  bspc monitor eDP1  -n 2 -d VI VII
+else
+  bspc monitor -d I II III IV V VI # VII VIII IX X
+fi
+
+#
+# rules
+#
+
+# firefox preferences should be floating
+bspc rule -a 'Firefox:Toplevel' floating=on
+bspc rule -a 'Pavucontrol'      state=floating
+bspc rule -a 'Wicd-client.py'   floating=on
+
+# export BSPWM_STATE=$TMPDIR/bspwm-state.json
+
+~/.config/bspwm/panel/panel &

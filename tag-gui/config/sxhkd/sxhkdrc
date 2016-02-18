@@ -1,0 +1,223 @@
+#
+# bspwm hotkeys
+#
+
+# exit bspwm
+
+# 	pkill panel; \
+# 	bspc quit
+
+# refresh or quit bspwm
+super + alt + {_,shift + }Escape
+	{bspc wm -d > "$BSPWM_STATE" && pkill panel && bspc quit, \
+	 pkill panel; bspc quit 1}
+
+super + {_,shift + }w
+	bspc node --{close,kill}
+
+# cycle layouts (monocle/tiled)
+super + m
+	bspc desktop --layout next
+
+super + b
+	bspc desktop --balance
+
+# swap the current node and the biggest node
+super + g
+	bspc node -s biggest
+
+# move the desired window into a presel window
+# super + y
+# 	bspc node -w last.manual
+# if the current node is automatic, send it to the last manual, otherwise pull the last leaf
+super + y
+        bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+
+# reset layout
+super + shift + space
+	bspc desktop -E && bspc node -s biggest
+
+super + v
+	bspc wm
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {x,y,z}
+	bspc node -g {locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# move windows
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# cycle nodes
+# super + tab?
+super + {_,shift + }c
+	bspc node -f {next,prev}
+
+# cycle desktops
+# super + bracket{left,right} # in latam keyboards braces are in the first layer
+super + brace{left,right}
+	bspc desktop -f {prev,next}
+
+super + shift + brace{left,right}
+	bspc node -d {prev,next}; \
+	bspc desktop -f {prev,next}
+
+# super + {_,shift} + brace{left,right}
+# 	bspc {desktop -f,node -d} {prev,next}
+# 	# bspc {desktop -f,node -d desktop -f} {prev,next}
+# 	bspc node -d prev; bspc desktop -f prev
+
+super + shift + braceleft
+	bspc node -d prev; \
+	bspc desktop -f prev
+
+super + shift + braceright
+	bspc node -d next; \
+	bspc desktop -f next
+
+# focus the last node/desktop
+# super + {grave,Tab} # in latam layout grave is a dead key
+super + {bar,Tab}
+	bspc {node,desktop} --focus last
+
+# navigate like <C-o> <C-i> in vim
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the give desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} ^{1-9,10}
+
+# flip horizontally/vertically
+super + {greater,less}
+	bspc node --flip {horizontal,vertical}
+
+super + apostrophe
+	bspc node --swap last
+
+#
+# preselect
+#
+
+# presel the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# presel the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel presel in the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the presel for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# resize tiled/floating
+#
+
+# expand tiled space in the given direction
+super + alt + {h,j,k,l}
+	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+# contract the tiled space in the given direction
+super + alt + shift + {h,j,k,l}
+	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	xdo move {-x -20,-y +20,-y -20,-x +20}
+
+# change window gap
+super + {minus,plus}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
+
+
+#
+# pointer focus/move/resize
+#
+
+~button1
+	bspc pointer -g focus
+
+# start move/resize
+super + button{1-3}
+	; bspc pointer -g {move,resize_side,resize_corner}
+
+# end move/resize
+super + @button{1-3}
+	bspc pointer -u
+
+
+### aañaa
+
+# circulate windows
+super + {comma,period}
+	bspc desktop -C {backward,forward}
+
+# super + {Left,Right}
+# 	bspc desktop -f {prev,next}
+
+super + question
+	xkb-switch -n
+
+super + questiondown
+	if xdotool search --onlyvisible --class 'trayer' windowunmap; then \
+		bspc config right_padding 0; \
+	else \
+		xdotool search --class 'trayer' windowmap %2; \
+		bspc config right_padding 24; \
+	fi
+	# if xdotool search --onlyvisible --class 'trayer' windowunmap; then \
+	# 	bspc config right_padding 0; \
+	# else \
+	# 	if ! xdotool search --class 'trayer' windowmap %2; then \
+	# 		trayer --height 20 --edge right --align left --margin 20 --widthtype request --transparent true --alpha 0 --tint 0x151515 & \
+	# 	fi; \
+	# bspc config right_padding 24; \
+	# fi
+
+#
+# wm independent hotkeys
+#
+
+XF86Audio{Raise,Lower}Volume
+	amixer -D pulse sset Master 7%{+,-}
+
+super + Return
+	termite
+
+super + d
+	dmenu_run
+
+super + shift + d
+	j4-dmenu-desktop
+
+super + shift + p
+	gmrun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd

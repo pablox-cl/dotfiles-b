@@ -1,0 +1,55 @@
+#
+# color palette
+#
+# #ff0040 ~ crimson
+# #151515 ~ nero (darker)
+# #2a2a2a ~ nero (gray-er)
+# #545454 ~ bleached cedar (dark gray)
+# #a6a6a6 ~ medium gray
+# #e9e9e9 ~ white smoke (light gray/off white)
+# #ffffff ~ white
+#
+
+COLOR_ACCENT='#ff0040'              # crimson
+
+COLOR_DEFAULT_FG='#545454'          # bleached cedar (medium gray)
+COLOR_DEFAULT_BG='#151515'          # nero           (almost black)
+
+COLOR_MONITOR_FG='#8dbcdf'          # FIXME
+COLOR_MONITOR_BG='#333232'          # FIXME
+COLOR_FOCUSED_MONITOR_FG='#b1d0e8'  # FIXME
+COLOR_FOCUSED_MONITOR_BG='#144b6c'  # FIXME
+
+COLOR_FOCUSED_FG='#e9e9e9'          # white smoke     (off white)
+COLOR_FOCUSED_BG='#2a2a2a'          # nero            (gray)
+# COLOR_FREE_FG=$COLOR_DEFAULT_FG
+# COLOR_FREE_BG=$COLOR_DEFAULT_BG
+# COLOR_FOCUSED_FREE_FG=$COLOR_FOCUSED_FG
+# COLOR_FOCUSED_FREE_BG=$COLOR_FOCUSED_BG
+
+# COLOR_OCCUPIED_FG=$COLOR_DEFAULT_FG
+# COLOR_OCCUPIED_BG=$COLOR_DEFAULT_BG
+# COLOR_FOCUSED_OCCUPIED_FG=$COLOR_FOCUSED_FG
+# COLOR_FOCUSED_OCCUPIED_BG=$COLOR_FOCUSED_BG
+
+# using $COLOR_ACCENT
+# COLOR_URGENT_FG='#f15d66'
+# COLOR_URGENT_BG='#333232'
+# COLOR_FOCUSED_URGENT_FG='#501d1f'
+# COLOR_FOCUSED_URGENT_BG='#d5443e'
+
+# not being used
+# COLOR_STATE_FG='#89b09c'
+# COLOR_STATE_BG='#333232'
+
+COLOR_TITLE_FG='#a6a6a6'            # dark gray
+# COLOR_TITLE_BG=$COLOR_DEFAULT_BG
+
+COLOR_SYS_FG=$COLOR_TITLE_FG
+# COLOR_SYS_BG=$COLOR_DEFAULT_BG
+
+# colors I don't use anymore
+# CF2='%{F#FF66D9EF}'                 # blue
+# CF3='%{F#FFF92672}'                 # violet
+
+# vim: set ft=sh

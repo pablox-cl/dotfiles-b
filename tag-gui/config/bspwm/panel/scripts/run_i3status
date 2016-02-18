@@ -1,0 +1,6 @@
+#!/bin/sh
+
+i3status -c ~/.config/i3status/simple.config | while true; do
+    read line
+    echo "S$line" || exit 1
+done
