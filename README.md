@@ -64,7 +64,7 @@ have in mind:
 
 + When it's possible, configs will try to match vim style
 + Assumes [prezto][] installed
-+ My configuration is heavily based on [Meslo (patched) Font](https://github.com/Lokaltog/powerline-fonts/tree/master/Meslo) (ttf-meslo-powerline-git in the [AUR](https://aur.archlinux.org/)
+~~+ My configuration is heavily based on [Meslo (patched) Font](https://github.com/Lokaltog/powerline-fonts/tree/master/Meslo) (ttf-meslo-powerline-git in the [AUR](https://aur.archlinux.org/)~~
 
 ### External stuff (*aka* submodules)
 
