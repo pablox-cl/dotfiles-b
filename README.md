@@ -115,6 +115,7 @@ https://github.com/rtomayko/dotfiles            | Who haven't looked here?
 https://github.com/spicycode/ze-best-zsh-config | Structure and granularity
 https://github.com/robbyrussell/oh-my-zsh       | A bit of everything
 https://github.com/ryanb/dotfiles               | A lot of stuff (`c`, `h`)
+https://github.com/pbrisbin/dotfiles            | Way more I can keep count of
 
 Copyright
 ---------
