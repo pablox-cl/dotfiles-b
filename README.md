@@ -79,7 +79,7 @@ Rationale
 ---------
 
 I decided to build my own "dotfiles" because that's the only way to really
-understand what's going on below, I chose prezto because it doesn't interfere
+understand what's going on below. I chose prezto because it doesn't interfere
 too much with the normal functioning of the zsh shell and has sane defaults.
 
 I tried to make this little project with all the documentation as possible,
