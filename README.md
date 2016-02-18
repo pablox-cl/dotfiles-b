@@ -1,8 +1,9 @@
 Dotfiles
 ========
 
-> Never leave home without them
+![Doge Meme](http://i.imgur.com/5N3IEq2.jpg)
 
+> Never leave home without them
 
 A *n*-times try to keep my dotfiles managed. This time with the awesome [rcm][]
 to manage the dotfiles and [prezto][] as the main (zsh) framework. Please take in
