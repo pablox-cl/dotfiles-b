@@ -10,7 +10,5 @@ TERMINAL=termite
 PAGER=less
 DIFFTOOL=meld
 
-RCM_DOTFILES=${HOME}/.dotfiles
-
 # https://wiki.archlinux.org/index.php/Java#Non-reparenting_window_managers
 _JAVA_AWT_WM_NONREPARENTING=1

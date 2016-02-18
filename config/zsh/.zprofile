@@ -45,6 +45,7 @@ XDG_DATA_HOME="$HOME"/.local/share
 
 GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 RCRC="$XDG_CONFIG_HOME"/rcrc                    # RCM config file
+export RCM_DOTFILES=$HOME/.dotfiles
 
 export XDG_CACHE_HOME XDG_CONFIG_HOME XDG_DATA_HOME RCRC GNUPGHOME
 
