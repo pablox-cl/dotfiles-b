@@ -14,7 +14,16 @@ work as intended if you don't have it.
 
 ### Prerequisites
 
-+ Zsh 4.3.10 (though I'm using 5.0.5, so I *guess* it's okay)
++ terminal
+    + Zsh 4.3.10 (prezto prerequisite)
+
++ window management
+    + bspwm
+    + sxhkd
+    + lemonbar with various fonts:
+        + stlarch (`stlarch_font` / `stlarch-font-ibx`)
+        + tewi-font (https://github.com/lucy/tewi-font)
+        + terminus (`terminus-font`)
 
 Install
 -------
@@ -28,20 +37,24 @@ Install
 
         RCRC="config/rcrc" lsrc
 
-3. Install
+4. Install
 
         RCRC="config/rcrc" rcup
 
-4. Install Prezto & its submodules
+5. Consider mixing and using tags
+
+        RCRC="config/rcrc" rcup -t gui
+
+6. Install Prezto & its submodules
 
         git clone https://github.com/sorin-ionescu/prezto ~/.dotfiles/config/zsh/.zprezto && cd ~/.dotfiles/config/zsh/.zprezto && git submodule update --init --recursive
 
-5. Update submodules
+7. Update submodules
 
         cd ~/.dotfiles
         git submodule update --init --recursive
 
-5. Profit! :moneybag:
+8. Profit! :moneybag:
 
 What's included?
 ----------------
