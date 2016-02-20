@@ -3,6 +3,9 @@ if (( ! $+commands[git] )); then
   return 1
 fi
 
+# conflicts with gpa (GnuPG Privacy Assistant)
+unalias gpa
+
 # invert prezto default aliases
 alias gws='git status --ignore-submodules=${_git_status_ignore_submodules}'
 alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules} --short'

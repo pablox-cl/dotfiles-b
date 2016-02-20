@@ -20,6 +20,7 @@
 	ci = commit --verbose
 	co = checkout
 	br = branch
+	pa = push --all
 	add = add -v
 	incoming = "!git remote update -p; git log ..@{u}"
 	outgoing = log @{u}..
