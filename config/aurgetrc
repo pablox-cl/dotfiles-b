@@ -1,4 +1,4 @@
-# build_directory=/tmp/aurget/
+build_directory=~/code/aur/
 edit_pkgbuilds=never
 keep_devels=false
 resolve_dependencies=true
